@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+@name StudentDao
+@Created by HCJ 
+@Date 2021/7/7 22:04 
+-->
+<mapper namespace="top.sqyy.dao.StudentDao">
+    <insert id="insertStudent">
+        insert into student(name,age) values (#{name},#{age})
+    </insert>
+    <select id="selectStudents" resultType="Student">
+        select id,name,age from student order by id desc
+    </select>
+</mapper>
